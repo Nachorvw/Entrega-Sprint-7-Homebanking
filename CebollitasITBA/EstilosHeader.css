@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+}
+
+header {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+}
+
+header img {
+  width: 150px;
+  grid-column: 2/7;
+  align-self: center;
+}
+
+#espacio {
+  height: 65px;
+  width: 100%;
+}
+
+#Cuenta {
+  grid-column: 9/11;
+  text-decoration: none;
+  color: rgb(116, 116, 116);
+  text-align: center;
+  width: 120px;
+  height: 20px;
+  align-self: center;
+  justify-self: end;
+  margin-right: 20px;
+}
+#Home {
+  grid-column: 11/13;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  width: 150px;
+  height: 40px;
+  text-align: center;
+  padding-top: 10px;
+  align-self: center;
+  border-radius: 10px;
+  background-color: #6c757d;
+  margin-right: 10px;
+}
+
+#Cuenta:hover {
+  color: rgb(57, 166, 255);
+}
+#Home:hover {
+  /* background-color: blue; */
+  background-color: rgb(57, 166, 255);
+  color: white;
+  transition-duration: 300ms;
+}
+
+@media (max-width: 600px) {
+  header {
+    grid-template-rows: repeat(2, 40px);
+    height: 100px;
+    padding-top: 10px;
+    border-radius: 0 0 10px 10px;
+  }
+  #espacio {
+    height: 50px;
+    width: 100%;
+    background-color: aqua;
+  }
+  #Cuenta {
+    grid-column: 10/12;
+    margin-right: 0;
+    padding: 10px;
+    height: 100%;
+  }
+  #Home {
+    grid-column: 2/12;
+    grid-row: 2/3;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  #Home:hover {
+    transition-duration: 100ms;
+  }
+}

@@ -1,0 +1,5 @@
+Pagina Antes de loguearse
+Pagina Principal
+pagina de login
+Pagina de Registro
+Pagina de Beneficios 

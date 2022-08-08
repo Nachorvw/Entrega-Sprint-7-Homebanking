@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+.Logo{
+    width: 50%; 
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.nav-item{
+    font-family: 'Hind Siliguri', sans-serif;
+    color: black;  
+}
+
+.titulo{
+    text-align: center;
+    
+}
+
+h1{
+    font-family: 'Hind Siliguri', sans-serif;
+}
+
+.container{
+    max-width: 1600px;
+    width: 100%;
+    
+    box-sizing: border-box;
+}
+
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.AlCentro{
+    text-align: center;
+    align-content: center;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+h2{
+    font-family: 'Hind Siliguri', sans-serif;
+}
+ 
+.columna{
+    margin: 15px;
+    max-width: 350px;
+    background: #DFF0F6;
+    border-radius: 20px;
+    box-shadow: 10px 10px 5px #CBDBE0;
+    width: 25%;
+    box-sizing: border-box;
+}
+
+.img{
+    
+    max-width: 350px;
+    max-height: 200px;
+    width: 100%;
+    border-radius: 20px;
+    
+}
+
+.puntos{
+    color:#13A6DD ;
+}
+
+footer{
+   background: #13A6DD;
+   height: 80px;
+   width: 100%;
+   padding-top: 10px;
+   color: rgb(139, 214, 236); 
+}
+
+
+
+.itbank{
+    display: flex;
+    max-width: 200px;
+    width: 200px;
+    float: left;
+    margin: 10px;
+}
+
+.link{
+    float: right;
+    margin: 0 10px;
+    text-decoration: none;
+    font-family: 'Hind Siliguri', sans-serif;
+    color: black;
+}
+
+.links{
+    margin-right: 50px;
+}
+
+@media (max-width: 1070){
+    .columna{
+        width: 50%;  
+    }
+}
+
+@media (max-width: 600){
+    .columna{
+        width: 100%;  
+    }
+}
