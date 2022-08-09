@@ -31,11 +31,6 @@
   position: relative;
 }
 
-* {
-  font-family: "Inter", sans-serif;
-  margin: 0;
-}
-
 .wraper {
   min-height: 100%;
   position: relative;

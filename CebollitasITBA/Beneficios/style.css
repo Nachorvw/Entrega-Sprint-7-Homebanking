@@ -64,7 +64,6 @@ h2{
 }
 
 .img{
-    
     max-width: 350px;
     max-height: 200px;
     width: 100%;
@@ -117,3 +116,52 @@ footer{
         width: 100%;  
     }
 }
+
+.wraper {
+    min-height: 100%;
+    position: relative;
+    float: left;
+    width: 100%;
+  }
+.menu {
+    position: sticky;
+  }
+.menu li {
+    width: fit-content;
+    background-color: rgb(48, 48, 49);
+    font-size: large;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    height: 1300px;
+    text-align: center;
+  }
+.menu li ul a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+  }
+.menu li ul {
+    padding: 0;
+    padding-top: 20px;
+  }
+.nav {
+    padding-top: 20px;
+    margin-top: -30px;
+    width: fit-content;
+    float: left;
+  }
+  
+.menu li ul:hover > a {
+    color: rgb(0, 119, 255);
+  }
+  
+#iniciar {
+    float: right;
+    position: flex;
+  }
+.banner{
+    position: relative;
+    width: 89%;
+    float: inline-end;
+    margin-bottom: 20px;
+  }

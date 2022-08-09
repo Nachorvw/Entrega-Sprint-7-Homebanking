@@ -64,15 +64,26 @@
 
 #tarjeta {
   grid-column: 2/3;
+  border-radius: 5px;
 }
 
 #prestamos {
   grid-column: 3/4;
+  border-radius: 5px;
 }
 #inversiones {
   grid-column: 4/5;
+  border-radius: 5px;
 }
-
+#seguros{
+  border-radius: 5px;
+}
+#ayuda{
+  border-radius: 5px;
+}
+#promos{
+  border-radius: 5px;
+}
 .menu a {
   text-decoration: none;
   width: 100%;
