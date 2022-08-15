@@ -39,10 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Cliente',
     'Cuenta',
-    'Login',
+    'login',
     'Prestamos',
     'Tarjetas',
-    'prueba',
+    
 ]
 
 MIDDLEWARE = [
@@ -60,7 +60,7 @@ ROOT_URLCONF = 'itbank.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ["/login/templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
