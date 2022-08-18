@@ -1,5 +1,53 @@
+
 html{
-    background-color: #47484d;
+    background-color: #366b9b;
+    background-image: url(/static/Login/img/ITBA.jpg);
+    background-repeat: no-repeat;
+    background-size:80%;
+    background-position: center 80%;
+}
+header {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+}
+header img {
+    width: 150px;
+    grid-column: 2/7;
+    align-self: center;
+}
+  
+#Cuenta {
+  grid-column: 9/11;
+  text-decoration: none;
+  color: rgb(116, 116, 116);
+  text-align: center;
+  width: 120px;
+  height: 20px;
+  align-self: center;
+  justify-self: end;
+  margin-right: 20px;
+}
+#Home {
+  grid-column: 11/13;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  width: 150px;
+  height: 40px;
+  text-align: center;
+  padding-top: 10px;
+  align-self: center;
+  border-radius: 10px;
+  background-color: #6c757d;
+  margin-right: 10px;
 }
 .contenedor{
     display: grid;
@@ -37,8 +85,10 @@ li{
 input{
     margin-top: 3px;
     background : transparent;
+    background-color: #e1e9f0;
     border-bottom:white 1px solid;
     color:white;
+    
 }
 
 .boton{
@@ -65,7 +115,7 @@ input{
 }
 
 ul{
-    margin-top: 70px;
+    margin-top: 80px;
 }
 
 .box{

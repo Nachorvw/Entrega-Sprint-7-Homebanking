@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'Login',
     'Prestamos',
     'Tarjetas',
+    'home',
+    'registro',
     
 ]
 
@@ -60,7 +62,7 @@ ROOT_URLCONF = 'itbank.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ["/login/templates"],
+        'DIRS': [""],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
