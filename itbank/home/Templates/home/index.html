@@ -24,8 +24,13 @@
   <body>
     <header>
       <img src="{% static 'home/img/logoITBANK.png' %}" alt="Logo ITBANK" />
-      <a id="Cuenta" href="/registro">Crear cuenta</a>
-      <a id="Home" href="/login">Home Banking</a>
+      {% if not request.user.is_authenticated %}
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'login' %}">Acceder</a>
+      </li>{% else %}<li class="nav-item">
+        <a class="nav-link" href="{% url 'logout' %}">Salir</a>
+      </li>
+      {% endif %}
     </header>
     <div id="espacio"></div>
     <main>
