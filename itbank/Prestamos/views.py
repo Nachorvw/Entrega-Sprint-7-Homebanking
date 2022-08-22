@@ -6,9 +6,9 @@ from django.urls import reverse
 
 
 def Prestamos(request):
-    prestamos_form = Prestamosform
+    prestamos_form = Prestamosform()
     if request.method == "POST":
         if prestamos_form.is_valid():
-            name = request.POST.get('name')
-            return redirect(reverse('prestamos')+"?ok")
+            name = request.POST.get('name', '')
+        return redirect(reverse('Prestamos')+"?ok")
     return render(request, "Prestamos/formulario.html", {'form': prestamos_form})

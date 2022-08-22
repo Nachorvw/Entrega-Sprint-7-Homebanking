@@ -7,14 +7,14 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="" method="post">
+    <form action="" method="POST">
         {% csrf_token %}
         <p>
         {{form.as_p}}
         </p>
         <input type="submit" value="Enviar">
         {% if 'ok' in request.GET %}
-        <p><b>Su mensaje se ha enviado correctamente, en breve nos pondremos encontacto</b></p>
+        <p><b>Su mensaje se ha enviado correctamente</b></p>
         {% endif %}
     </form>
 </body>
