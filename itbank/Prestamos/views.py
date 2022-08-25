@@ -2,9 +2,10 @@ from unicodedata import name
 from django.shortcuts import render, redirect
 from .forms import Prestamosform
 from django.urls import reverse
-# Create your views here.
+from django.contrib.auth.decorators import login_required
 
 
+@login_required
 def Prestamos(request):
     prestamos_form = Prestamosform()
     if request.method == "POST":
