@@ -17,10 +17,12 @@ from django.contrib import admin
 from django.urls import include, path
 from home.views import home
 from Prestamos.views import Prestamos
+from Cuenta.views import dolar
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('django.contrib.auth.urls')),
     path('', home, name='home'),
-    path('Prestamos/', Prestamos, name='Prestamos')
+    path('Prestamos/', Prestamos, name='Prestamos'),
+    path("Cuenta/",dolar,name="cuenta")
 ]
