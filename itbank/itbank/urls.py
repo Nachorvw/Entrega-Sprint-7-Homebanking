@@ -22,7 +22,7 @@ from Cuenta.views import dolar
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('django.contrib.auth.urls')),
-    path('home/', home, name='home'),
+    path('', home, name='home'),
     path('Prestamos/', Prestamos, name='Prestamos'),
     path("Cuenta/",dolar,name="cuenta")
 ]
