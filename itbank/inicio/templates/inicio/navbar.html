@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+     <nav class="navbar bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand">ITBANK</a>
+        <button class="btn btn-outline-success" type="submit">
+            cerrar secion
+          </button>
+      </div>
+    </nav>
+
+   <!--  <div style="width:300px;height: 100%;margin: auto;display: flex;flex-direction: column;justify-content: center;gap:25px;align-items: center;margin-top: 100px;">
+        <h2>Prestamos</h2>
+        <form style="width: 300px;margin: auto;display: flex;flex-direction: column;justify-content: center;gap:25px;align-items: center" action="" method="POST">
+          {% csrf_token %}
+            <input class="form-control" type="text" placeholder="Tipo de prestamo" label="tipo_prestamo">
+            <input class="form-control" type="number" placeholder="Monto" label="Monto">
+            
+            <input class="form-control" type="text" placeholder="clase" label="clase">
+            <input class="form-control" type="date" placeholder="Fecha de inicio" label="fecha">
+        </form>
+        {{request.POST}}
+        <input style="color:rgb(255, 255, 255) ;" class="form-control bg-primary" type="submit" placeholder="Pedir prestamo" label="Pedir">
+        
+    </div>
+     -->
+    <form action="" method="post">
+     {% csrf_token %}
+      <p><input  type="text" placeholder="Prestamos" name="prestamo"></p>
+      <p><input  type="text" placeholder="clase" name="clase"></p>
+      <p><input  type="number" placeholder="Monto" name="Monto"></p>
+      <p><input  type="date" placeholder="fecha" name="fecha"></p>
+      <p><input  type="submit" value="Enviar"></p>
+    </form>
+    {% if 'ok' in request.GET %}
+    <p><b>Su mensaje se ha enviado correctamente, en breve nos pondremos encontacto</b></p>
+    {% endif %}
+    {{request.POST}}
+
+   
+  </body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
+
