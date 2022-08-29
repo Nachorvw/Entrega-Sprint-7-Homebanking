@@ -2,6 +2,7 @@ from django.shortcuts import render, HttpResponse, redirect
 from inicio.Form import ContactForm
 from django.urls import reverse
 from inicio.models import Pre
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
@@ -10,6 +11,7 @@ def inicio(request):
     return render(request, "inicio/navbar.html")
 
 
+@login_required
 def formulario(request):
     Contact_form = ContactForm()
     print("hola")
