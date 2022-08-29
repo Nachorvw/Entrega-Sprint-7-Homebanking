@@ -25,13 +25,16 @@
     <header>
       <img src="{% static 'home/img/LogoITBANK.png' %}" alt="Logo ITBANK" />
       {% if not request.user.is_authenticated %}
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'login' %}">Acceder</a>
-      </li>{% else %}<li class="nav-item">
-        <a class="nav-link" href="{% url 'logout' %}">Salir</a>
-      </li>
+      <p>
+        <a class="btn btn-primary" href="{% url 'login' %}">Acceder</a>
+      </p>{% else %}
+      <p>
+        <a class="btn btn-primary" href="{% url 'logout' %}">Cerrar Sesion</a>
+      </p>
       {% endif %}
-      <p>{{user.get_username }}</p>
+      <p class="h3">
+        {{user.get_username }}
+      </p>
     </header>
     <div id="espacio"></div>
     <main>
@@ -49,7 +52,7 @@
           ><span class="material-symbols-outlined"> credit_score </span
           >Tarjeta</a
         >
-        <a id="prestamos" href="http://127.0.0.1:8000/Prestamos/"
+        <a id="prestamos" href="http://127.0.0.1:8000/prestamos/"
           ><span class="material-symbols-outlined"> monetization_on </span
           >Préstamos</a
         >

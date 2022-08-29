@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bootstrap demo</title>
+    <title>Prestamos</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -15,9 +15,11 @@
      <nav class="navbar bg-light">
       <div class="container-fluid">
         <a class="navbar-brand">ITBANK</a>
-        <button class="btn btn-outline-success" type="submit">
-            cerrar secion
-          </button>
+        {% if request.user.is_authenticated %}
+        <li>
+          <a class="btn btn-outline-success" href="{% url 'logout' %}">Cerrar Sesion</a>
+        </li>
+        {% endif %}
       </div>
     </nav>
 
@@ -38,18 +40,22 @@
      -->
     <form action="" method="post">
      {% csrf_token %}
-      <p><input  type="text" placeholder="Prestamos" name="prestamo"></p>
-      <p><input  type="text" placeholder="clase" name="clase"></p>
-      <p><input  type="number" placeholder="Monto" name="Monto"></p>
-      <p><input  type="date" placeholder="fecha" name="fecha"></p>
-      <p><input  type="submit" value="Enviar"></p>
-    </form>
-    {% if 'ok' in request.GET %}
-    <p><b>Su mensaje se ha enviado correctamente, en breve nos pondremos encontacto</b></p>
-    {% endif %}
-    {{request.POST}}
-
-   
+    <div class="container">
+      <div class="row mt-3">
+        <div class="col-md 9 mx-auto mb-5">
+          <p><input class="form-control" type="text" placeholder="Prestamos" name="prestamo"></p>
+          <p><input class="form-control" type="text" placeholder="clase" name="clase"></p>
+          <p><input class="form-control" type="number" placeholder="Monto" name="Monto"></p>
+          <p><input class="form-control" type="date" placeholder="fecha" name="fecha"></p>
+          <p><input class="btn btn-primary btn-block" type="submit" value="Enviar"></p>
+          </form>
+          {% if 'ok' in request.GET %}
+          <p><b>Su mensaje se ha enviado correctamente, en breve nos pondremos encontacto</b></p>
+          {% endif %}
+          {{request.POST}}
+        </div>
+      </div>
+    </div>
   </body>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
