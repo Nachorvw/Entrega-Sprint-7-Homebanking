@@ -16,9 +16,9 @@
       <div class="container-fluid">
         <a class="navbar-brand">ITBANK</a>
         {% if request.user.is_authenticated %}
-        <li>
-          <a class="btn btn-outline-success" href="{% url 'logout' %}">Cerrar Sesion</a>
-        </li>
+        
+          <a class="btn btn-outline-success" href="{% url 'logout' %}" s>Cerrar Sesion</a>
+        
         {% endif %}
       </div>
     </nav>
@@ -52,7 +52,7 @@
           {% if 'ok' in request.GET %}
           <p><b>Su mensaje se ha enviado correctamente, en breve nos pondremos encontacto</b></p>
           {% endif %}
-          {{request.POST}}
+          
         </div>
       </div>
     </div>

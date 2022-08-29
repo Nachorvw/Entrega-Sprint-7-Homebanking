@@ -30,5 +30,5 @@ def formulario(request):
 
         ppp.save()
         print(ppp)
-        return HttpResponse("<h1>Ya se mando su pedido de prestamos, pronto nos comunicamos</h1>")
+        return render(request, "Cuenta/dolarsi.html", {'form': Contact_form})
     return render(request, "inicio/navbar.html", {'form': Contact_form})
