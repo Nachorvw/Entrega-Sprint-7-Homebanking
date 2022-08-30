@@ -43,16 +43,36 @@
     <div class="container">
       <div class="row mt-3">
         <div class="col-md 9 mx-auto mb-5">
-          <p><input class="form-control" type="text" placeholder="Prestamos" name="prestamo"></p>
-          <p><input class="form-control" type="text" placeholder="clase" name="clase"></p>
-          <p><input class="form-control" type="number" placeholder="Monto" name="Monto"></p>
-          <p><input class="form-control" type="date" placeholder="fecha" name="fecha"></p>
-          <p><input class="btn btn-primary btn-block" type="submit" value="Enviar"></p>
+          <div class="form-floating mb-3">
+            <select class="form-select" type="text" placeholder="Prestamos" id="prestamos"name="prestamo">
+              <option value="1">hipotecario</option>
+              <option value="2">prendario</option>
+              <option value="3">personal</option>
+            </select>
+            <label for="prestamos">Tipo de prestamo a pedir</label>
+          </div>
+          <div class="form-floating mb-3">
+            <select class="form-select" type="text" placeholder="clase" id="clase" name="clase">
+              <option value="1">Classic</option>
+              <option value="2">Gold</option>
+              <option value="3">Black</option>
+            </select>
+            <label for="clase">Clase de cuenta</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input class="form-control" type="number" placeholder="Monto" id="Monto" name="Monto">
+            <label for="monto">Monto a pedir</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input class="form-control" type="date" placeholder="fecha" id="fecha" name="fecha">
+            <label for="fecha">Fecha</label>
+          </div>
+          <input class="btn btn-primary btn-block" type="submit" value="Enviar">
           </form>
           {% if 'ok' in request.GET %}
           <p><b>Su mensaje se ha enviado correctamente, en breve nos pondremos encontacto</b></p>
           {% endif %}
-          
+        
         </div>
       </div>
     </div>
