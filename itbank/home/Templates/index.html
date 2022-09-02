@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{% static 'home/css/EstilosHeader.css' %}" />
+    <!--   <link rel="stylesheet" href="{% static 'home/css/EstilosHeader.css' %}" /> -->
     <link rel="stylesheet" href="{% static 'home/css/Main.css' %}" />
     <link
       rel="stylesheet"
@@ -23,20 +23,44 @@
   </head>
   <body>
     <header>
-      <img src="{% static 'home/img/LogoITBANK.png' %}" alt="Logo ITBANK" />
+      <nav class="navbar navbar-expand-lg bg-light" style="width: 100%">
+        <div class="container-fluid" style="width: 100%">
+          <a class="navbar-brand">ITBANK</a>
+          {% if request.user.is_authenticated %}
+
+          <a
+            class="btn btn-outline-success bg-primary"
+            style="color: white"
+            href="{% url 'logout' %}"
+            >Cerrar sesion</a
+          >
+
+          {% else %}
+          <a
+            class="btn btn-outline-success bg-primary"
+            href="{% url 'login' %}"
+            style="color: white"
+            >Entrar</a
+          >
+
+          {% endif %}
+          <p class="h3" style="margin-right: 20px">{{user.get_username }}</p>
+        </div>
+      </nav>
+
+      <!-- <img src="{% static 'home/img/LogoITBANK.png' %}" alt="Logo ITBANK" />
       {% if not request.user.is_authenticated %}
       <p>
         <a class="btn btn-primary" href="{% url 'login' %}">Acceder</a>
-      </p>{% else %}
+      </p>
+      {% else %}
       <p>
         <a class="btn btn-primary" href="{% url 'logout' %}">Cerrar Sesion</a>
       </p>
       {% endif %}
-      <p class="h3">
-        {{user.get_username }}
-      </p>
+      <p class="h3">{{user.get_username }}</p> -->
     </header>
-    <div id="espacio"></div>
+
     <main>
       <div class="slider">
         <ul>
@@ -56,7 +80,7 @@
           ><span class="material-symbols-outlined"> monetization_on </span
           >Préstamos</a
         >
-        <a id="inversiones" href=""
+        <a id="inversiones" href="http://127.0.0.1:8000/Cuenta/"
           ><span class="material-symbols-outlined"> trending_up </span
           >Inversiones</a
         >
@@ -64,11 +88,11 @@
           ><span class="material-symbols-outlined"> real_estate_agent </span
           >DolarSi</a
         >
-        <a id="ayuda" href=""
+        <a id="ayuda" href="http://127.0.0.1:8000/Cuenta/"
           ><span class="material-symbols-outlined"> support_agent </span
           >Ayuda</a
         >
-        <a id="promos" href="Beneficios/index.html"
+        <a id="promos" href="http://127.0.0.1:8000/Cuenta/"
           ><span class="material-symbols-outlined"> celebration </span
           >Beneficios</a
         >
@@ -99,7 +123,8 @@
                 data-bs-parent="#questions"
               >
                 <div class="accordion-body">
-                  Es muy simple convertirte en cliente. Ingresa a la sección de "Crear Cuenta" y registrate en pocos minutos!
+                  Es muy simple convertirte en cliente. Ingresa a la sección de
+                  "Crear Cuenta" y registrate en pocos minutos!
                 </div>
               </div>
             </div>
@@ -112,7 +137,7 @@
                   data-bs-toggle="collapse"
                   data-bs-target="#question-two"
                 >
-                ¿Cuáles son los medios de contacto?
+                  ¿Cuáles son los medios de contacto?
                 </button>
               </h2>
               <div
@@ -122,7 +147,8 @@
                 data-bs-parent="#questions"
               >
                 <div class="accordion-body">
-                  Podés comunicarte con nosotros mediante nuestras redes sociales o acercándote a alguna de nuestras sucursales
+                  Podés comunicarte con nosotros mediante nuestras redes
+                  sociales o acercándote a alguna de nuestras sucursales
                 </div>
               </div>
             </div>
@@ -145,7 +171,8 @@
                 data-bs-parent="#questions"
               >
                 <div class="accordion-body">
-                  Lo único que cobraremos será el mantenimiento de las tarjetas de crédito si decidís pedirlas
+                  Lo único que cobraremos será el mantenimiento de las tarjetas
+                  de crédito si decidís pedirlas
                 </div>
               </div>
             </div>
@@ -280,9 +307,27 @@
       <h2><b>UBICACIÓN</b></h2>
       <ul>
         <li><h4>Redes sociales</h4></li>
-        <li><img src="{% static 'home/logos/logoface.png' %}" alt="Logo Facebook"width="20px"><a href="https://facebook.com">  Facebook</a></li>
-        <li><img src="{% static 'home/logos/logoinsta.png' %}" alt="Logo Instagram" width="20px"><a href="https://instagram.com">  Instagram</a></li>
-        <li><img src="{% static 'home/img/logotwitter.png'%}" alt="Logo Twitter"width="20px"><a href="https://twitter.com">  Twitter</a></li>
+        <li>
+          <img
+            src="{% static 'home/logos/logoface.png' %}"
+            alt="Logo Facebook"
+            width="20px"
+          /><a href="https://facebook.com"> Facebook</a>
+        </li>
+        <li>
+          <img
+            src="{% static 'home/logos/logoinsta.png' %}"
+            alt="Logo Instagram"
+            width="20px"
+          /><a href="https://instagram.com"> Instagram</a>
+        </li>
+        <li>
+          <img
+            src="{% static 'home/img/logotwitter.png'%}"
+            alt="Logo Twitter"
+            width="20px"
+          /><a href="https://twitter.com"> Twitter</a>
+        </li>
       </ul>
 
       <iframe

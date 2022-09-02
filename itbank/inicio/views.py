@@ -27,8 +27,27 @@ def formulario(request):
 
         ppp = Pre(tipo=request.POST['prestamo'], monto=request.POST['Monto'],
                   cliente=request.POST['clase'], fecha=request.POST['fecha'])
+        print(ppp.cliente)
 
-        ppp.save()
-        print(ppp)
-        return HttpResponse("<h1>Ya se mando su pedido de prestamos, pronto nos comunicamos</h1>")
+        if ppp.cliente == "1" :
+                if int(ppp.monto) <= 100000 :
+                    print("prestamo aprovado")
+                    ppp.save()
+                    return redirect(reverse('formulario')+"?ok")
+                return redirect(reverse('formulario')+"?no")
+
+        if ppp.cliente == "2" :
+            if int(ppp.monto) <= 300000 :
+                print("prestamo aprovado")
+                ppp.save()
+                return redirect(reverse('formulario')+"?ok")
+            return redirect(reverse('formulario')+"?no")
+
+        if ppp.cliente == "3" :
+            if int(ppp.monto) <= 500000 :
+                print("prestamo aprovado")
+                ppp.save()
+                return redirect(reverse('formulario')+"?ok")
+            return redirect(reverse('formulario')+"?no")
+
     return render(request, "inicio/navbar.html", {'form': Contact_form})
