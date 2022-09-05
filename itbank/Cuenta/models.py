@@ -2,7 +2,7 @@ from pyexpat import model
 from django.db import models
 
 # Create your models here.
-class Cuenta (models.Model):
+""" class Cuenta (models.Model):
     account_id = models.IntegerField()
     customer_id=models.IntegerField()
     balance=models.IntegerField()
@@ -13,4 +13,4 @@ class Movimientos (models.Model):
     nro_cuenta = models.IntegerField()
     monto=models.IntegerField()
     tipo_operacion=models.IntegerField()
-    hora=models.DateTimeField()
+    hora=models.DateTimeField() """

@@ -15,6 +15,7 @@
      <nav class="navbar bg-light">
       <div class="container-fluid">
         <a class="navbar-brand">ITBANK</a>
+         <a class="btn btn-outline-success" href="/Cuenta" s>Volver</a> 
         {% if request.user.is_authenticated %}
         
           <a class="btn btn-outline-success" href="{% url 'logout' %}" s>Cerrar Sesion</a>
@@ -52,14 +53,14 @@
               </select>
               <label for="prestamos">Tipo de prestamo a pedir</label>
             </div>
-            <div class="form-floating mb-3">
+           <!--  <div class="form-floating mb-3">
               <select class="form-select" type="text" placeholder="clase" id="clase" name="clase">
                 <option value="1">Classic</option>
                 <option value="2">Gold</option>
                 <option value="3">Black</option>
               </select>
               <label for="clase">Clase de cuenta</label>
-            </div>
+            </div> -->
             <div class="form-floating mb-3">
               <input class="form-control" type="number" placeholder="Monto" id="Monto" name="Monto">
               <label for="monto">Monto a pedir</label>
@@ -69,6 +70,7 @@
               <label for="fecha">Fecha</label>
             </div>
             <input class="btn btn-primary btn-block" type="submit" value="Enviar">
+            
             {% if 'ok' in request.GET %}
             <p><b>Su mensaje se ha enviado correctamente, en breve nos pondremos encontacto</b></p>
             {% endif %}
@@ -77,9 +79,12 @@
             {% endif %}
           
           </div>
+  
+          
         </div>
       </div>
     </form>
+
   </body>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
